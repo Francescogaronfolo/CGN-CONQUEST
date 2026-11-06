@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../data/'+p,import.meta.url))),geo=read('territory.geojson'),catalog=read('catalog.json'),ring=read('cuggiono-boundary.geojson').geometry.coordinates[0];
+function inside([x,y]){let c=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>y)!=(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;}
+test('Every playable property has a unique real OSM building inside Cuggiono',()=>{const buildings=new Map(geo.features.filter(f=>f.properties.kind==='building').map(f=>[f.id,f]));assert(catalog.length>1000);assert.equal(new Set(catalog.map(p=>p.id)).size,catalog.length);for(const p of catalog){assert(buildings.has(p.id));assert(inside(p.center));assert(p.price>0);}});
+test('Homes exist in both western Castelletto and eastern Cuggiono',()=>{assert(catalog.some(p=>p.homeCandidate&&p.center[0]<8.79));assert(catalog.some(p=>p.homeCandidate&&p.center[0]>8.81));});

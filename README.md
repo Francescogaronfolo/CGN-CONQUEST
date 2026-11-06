@@ -1,45 +1,47 @@
-# Milano Capitali
+# CGN CONQUEST
 
-Gioco gestionale 2D nella provincia di Milano: sviluppa attività, collega comuni e negozia con le altre società. Progetto autonomo derivato dal prototipo Comuni & Capitali di Trenoscommesse, mantenendo solo il gioco provinciale e i suoi test.
+Progetto indipendente da Milano. Primo prototipo giocabile locale: Cuggiono e Castelletto, immobili geografici reali, economia e proprietà virtuali. Non è ancora un multiplayer e non è una riproduzione catastale completa.
 
-## Avvio e pubblicazione
+## Avvio
 
-Richiede Node.js 22 o successivo. Nessuna dipendenza da installare.
+Node 22 o successivo. Nessuna dipendenza da installare.
 
 ```sh
+npm test
 npm start
 ```
 
-Apri http://localhost:4391. Test: `npm test`.
+Aprire http://127.0.0.1:4393. Per Vercel importare questo repository, preset Other, nessun comando di build, directory di output `.`. Non utilizzare il progetto Vercel Milano.
 
-**Vercel:** importa questo repository, seleziona framework **Other**, lascia vuoto il comando di build e usa la cartella radice come output (`.`). La configurazione è già in `vercel.json`. Il gioco si apre direttamente su `/`, non su una sottopagina.
+## Cosa si prova
 
-Questa versione funziona contro IA e salva nel browser. **Non è multiplayer online**: accessi, database Firebase e progressi condivisi saranno integrati separatamente. Nessun audio e nessun collegamento ai dati di altri giochi. Il salvataggio ha una chiave propria e non modifica quello di Trenoscommesse.
+- Una casa virtuale e 12.000 € iniziali; aprire servizi da casa per cominciare a incassare.
+- Toccare una sagoma reale: acquisto, avvio e miglioramento hanno prezzo e conferma nel popup ancorato all’edificio. Il miglioramento mantiene aperto il popup.
+- Proprietà → lista delle attività; Imprese → quota o acquisizione; Offerte → risposte e voti; Classifica → liquidità personale realmente spendibile.
+- Cinque IA locali. Arrivano anche offerte di associazione: serve il voto umano, nessuna accettazione automatica per il giocatore.
+- Salvataggio locale indipendente (`cgn-conquest-prototype-v1`). Non legge i salvataggi di Milano. Non genera entrate offline.
+- Nessun audio. Nessuna autenticazione o raccolta di dati personali.
 
-## Miglioramenti della versione separata
+## Vendere significa continuare a giocare
 
-- Mappa con colori distinti delle imprese, confini esterni e sedi direttamente selezionabili. La provincia rimane senza linee di collegamento; strade e attività compaiono allo zoom urbano.
-- Selezione dei lotti che privilegia edifici rispetto alle strade sottostanti; tolleranza maggiore al tocco, senza selezionare al termine di trascinamenti o pinch.
-- Scorrimento inerziale con frenata; zoom a rotella progressivo. Recentratura interrompe il movimento. La barra zoom rimane disponibile.
-- “Le mie attività”: acquisti e potenziamenti nello stesso pannello, piani 25%/50%/tutto, posizione di ogni edificio raggiungibile dalla lista. Il pannello rimane aperto durante i lavori.
-- “Società & accordi”: tutte le imprese, filtro alleati, accesso alla mappa, scambi, proposta cooperativa diretta. Le proposte richiedono consenso; nessun fondo privato condiviso automaticamente.
-- Preparazione dei piani edilizi evitata in panoramica e geometria dei confini riutilizzata finché non cambia la proprietà. Nessun font esterno richiesto.
+Acquisizione totale: consenso di tutti i soci cedenti e del gestore; il prezzo va ai cedenti secondo le quote vendute. Il compratore ottiene la società, non il portafoglio personale del venditore. Il venditore resta gestore delle attività, conserva quanto incassato e riceve il 25% dell’utile operativo. Il proprietario riceve il restante 75%. Questa percentuale è provvisoria e bilanciabile. Il gestore può ancora migliorare le attività pagando con il proprio capitale e investire altrove.
 
-La cooperazione attuale è una coalizione bilaterale temporanea: passaggio reciproco e +5% alle entrate. Ogni società conserva proprietà, denaro e risorse. Non è una fusione.
+Associazione: nel primo prototipo si vende il 25%; il titolare conserva almeno il 51% e continua a controllare. Il motore supporta anche una proposta iniziale del 49%. Utili proporzionali alle quote. Comprare una quota non consente di spendere la liquidità personale del socio.
 
-## Struttura
+Le proposte non spostano denaro. Alla conferma finale si ricontrollano liquidità e quote, poi il trasferimento avviene in modo atomico. Un rifiuto non costa nulla. Le proposte scadono dopo tre minuti di simulazione.
 
-- `index.html`: ingresso e interfaccia del gioco.
-- `milano/comuni/app.js`: flussi di gioco e pannelli.
-- `view.js`: canvas, camera e livelli della mappa.
-- `interaction.js`: selezione, inerzia e stato delle relazioni.
-- `relations.js`: schede società e accesso alla cooperazione.
-- `management.js`: patrimonio, acquisti e piani di potenziamento.
-- `engine.js`: simulazione, regole e conservazione delle risorse.
-- `tests/`: economia, costruzione, salvataggi, mappa e interazioni.
+## Territorio e licenze
 
-I dettagli della simulazione precedente sono in `milano/comuni/README.md`. I percorsi pubblici e i riferimenti a Firebase descritti storicamente non sono parte di questa versione autonoma.
+Sagome, strade e corsi d’acqua: © OpenStreetMap contributors, [ODbL](https://www.openstreetmap.org/copyright). L’estratto geografico derivato è disponibile in `data/territory.geojson`, con provenienza e conteggi in `data/provenance.json`. Non tutte le attività o destinazioni reali sono note: prezzi, destinazioni di gioco e diritti di proprietà sono inventati. La selezione automatica esclude le tipologie civiche esplicite; non certifica la destinazione reale di ogni immobile.
 
-## Dati geografici
+Confine comunale: ISTAT via [geojson-italy](https://github.com/guglielmo/geojson-italy), CC BY 4.0. Coordinate geografiche conservate, nessun reticolo inventato. Non si afferma una corrispondenza catastale o una completezza 1:1 di ogni particolare. Castelletto appartiene al comune: [fonte comunale](https://comune.cuggiono.mi.it/luoghi/2270030/frazione-castelletto).
 
-Confini ISTAT tramite [geojson-italy](https://github.com/guglielmo/geojson-italy), licenza CC BY 4.0; vedi [ATTRIBUTION.md](ATTRIBUTION.md). Eccezioni di gioco dichiarate: Milano divisa in quattro settori; San Colombano ricollocato vicino a San Zenone. La rete urbana è una rappresentazione di gioco, non un rilievo stradale reale.
+Leaflet 1.9.4 vendorizzato in `vendor/`, licenza BSD nel file allegato. Il gioco non richiede tiles, CDN o query Overpass a ogni partita. `tools/fetch-map.py` esegue un estratto manuale; `tools/prepare-map.py` compila gli estratti OSM locali. La prima importazione è stata separata in edifici e rete per evitare timeout. Le coordinate dei due pulsanti di località sono punti di navigazione, non confini di frazione.
+
+## Limiti e prossima fase
+
+Questa è una fondazione verificabile, non un’economia definitiva: quattro attività, otto livelli, un solo tipo di ingresso minoritario nell’interfaccia. Mancano cantieri, evoluzione artistica delle sagome per livello, bilanciamento dei ritorni e specializzazioni delle nuove imprese. Le IA investono e negoziano ma non simulano persone online.
+
+Per il multiplayer persistente: identità verificata; server autoritativo; proprietà e quote nel database; transazioni con revisione e chiave di idempotenza; offerte, voti e scadenze server; calcolo entrate su timestamp server; nessun capitale accettato dal client. Ogni edificio reale potrà ospitare unità virtuali stabili (sedi/appartamenti): nuovi giocatori non richiedono ridisegnare i confini di Cuggiono. Non pubblicare questa simulazione locale come economia online sicura.
+
+La precedente copia di Milano è conservata nella cronologia e nel tag `archive/milano-placeholder`.

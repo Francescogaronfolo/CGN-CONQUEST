@@ -1,0 +1,16 @@
+{
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "timestamps": [
+    "2026-11-06T01:25:43Z",
+    "2026-11-06T01:28:51Z"
+  ],
+  "boundary": "ISTAT via guglielmo/geojson-italy, CC BY 4.0",
+  "counts": {
+    "building": 4890,
+    "road": 877,
+    "water": 105
+  },
+  "playable": 2806,
+  "economy": "All prices, ownership, activities and income are fictional game values."
+}
