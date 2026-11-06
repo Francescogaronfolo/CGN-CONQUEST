@@ -45,3 +45,13 @@ Questa è una fondazione verificabile, non un’economia definitiva: quattro att
 Per il multiplayer persistente: identità verificata; server autoritativo; proprietà e quote nel database; transazioni con revisione e chiave di idempotenza; offerte, voti e scadenze server; calcolo entrate su timestamp server; nessun capitale accettato dal client. Ogni edificio reale potrà ospitare unità virtuali stabili (sedi/appartamenti): nuovi giocatori non richiedono ridisegnare i confini di Cuggiono. Non pubblicare questa simulazione locale come economia online sicura.
 
 La precedente copia di Milano è conservata nella cronologia e nel tag `archive/milano-placeholder`.
+
+## Cartografia urbana · aggiornamento 0.2
+
+La mappa distingue sagome residenziali note, industria/magazzini, commercio, servizi civici e patrimonio. Le destinazioni assenti nei dati restano “uso non censito”; non vengono inventati occupanti o settori reali. Prezzi, ricavi e attività giocabili rimangono virtuali, separati dal nome reale del luogo. I luoghi civici o storici riconosciuti sono consultabili e non acquistabili; le proprietà già presenti nei salvataggi restano compatibili.
+
+`data/landscape.geojson` contiene le superfici reali di boschi, coltivi, aree urbane, produttive e verdi. `data/places.json` contiene 45 luoghi pubblicamente mappati e le rispettive fonti OSM; per Villa Annoni, Palazzo Clerici, il parco e altre emergenze sono collegate anche fonti del Comune, Ministero della Cultura o Regione Lombardia. I dati sono una fotografia cartografica: non si certifica che tutte le attività siano ancora aperte, né la completezza degli esercizi presenti.
+
+Ombre leggere rispettano le sagome esistenti: non rappresentano altezze 3D misurate. Larghezze di strade e acque sono stilizzate per leggibilità. Non sono usate immagini satellitari o dati Google Earth. La vista resta una cartografia vettoriale 2D, utilizzabile senza chiavi API o tiles esterni. I nomi si diradano con lo zoom e con i filtri Territorio / Attività / Patrimonio. Luoghi apre un unico pannello con legenda e accesso ai punti reali.
+
+L’arricchimento è riproducibile con `python tools/enrich-map.py` usando gli estratti OSM in cache. I JSON derivati e le date delle fonti sono inclusi nel repository; gli estratti grezzi, ignorati da Git, non sono richiesti dal gioco. La copertura delle aree dettagliate deriva dagli estratti API del centro e del settore occidentale, non da una nuova zonizzazione inventata o da una certificazione urbanistica.

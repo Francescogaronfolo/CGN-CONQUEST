@@ -1,16 +1,1 @@
-{
-  "source": "OpenStreetMap contributors",
-  "license": "ODbL 1.0",
-  "timestamps": [
-    "2026-11-06T01:25:43Z",
-    "2026-11-06T01:28:51Z"
-  ],
-  "boundary": "ISTAT via guglielmo/geojson-italy, CC BY 4.0",
-  "counts": {
-    "building": 4890,
-    "road": 877,
-    "water": 105
-  },
-  "playable": 2806,
-  "economy": "All prices, ownership, activities and income are fictional game values."
-}
+{"source":"OpenStreetMap contributors","license":"ODbL 1.0","timestamps":["2026-11-06T01:25:43Z","2026-11-06T01:28:51Z"],"boundary":"ISTAT via guglielmo/geojson-italy, CC BY 4.0","counts":{"building":4904,"road":877,"water":105},"playable":2806,"economy":"All prices, ownership, activities and income are fictional game values.","context":{"places":45,"landscapeAreas":287,"snapshots":[{"file":"osm-buildings.json","timestamp":"2026-11-06T01:25:43Z"},{"file":"osm-network.json","timestamp":"2026-11-06T01:28:51Z"},{"file":"osm-pois.json","timestamp":"2026-11-06T01:51:14Z"},{"file":"osm-landuse.json","timestamp":"2026-11-06"},{"file":"osm-context.json","timestamp":"2026-11-06T01:56:01.380372+00:00"}],"coverage":"OSM municipal bbox for buildings, roads and POI nodes; OSM API centre and western sector for detailed land use. Not a complete cadastral or live business register."}}

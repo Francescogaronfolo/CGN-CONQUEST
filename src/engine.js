@@ -6,7 +6,7 @@ export function createWorld(catalog,name='La mia impresa'){
  if(catalog.length<12||new Set(catalog.map(p=>p.id)).size!==catalog.length)throw Error('Catalogo geografico non valido.');
  const w={version:1,time:0,seq:0,players:[],companies:[],assets:{},offers:[],events:[],initial:START_CASH*6,earned:0,spent:0};
  const names=[String(name).trim().slice(0,28)||'La mia impresa','Naviglio Ventures','Corte Nord','Ticino Capital','Castelletto Lab','Borgo Partners'];
- const homes=catalog.filter(p=>p.homeCandidate).sort((a,b)=>Math.hypot(a.center[0]-8.8158,a.center[1]-45.5064)-Math.hypot(b.center[0]-8.8158,b.center[1]-45.5064));if(homes.length<6)throw Error('Servono sei sedi residenziali.');
+ const homes=catalog.filter(p=>p.homeCandidate&&!p.protected).sort((a,b)=>Math.hypot(a.center[0]-8.8158,a.center[1]-45.5064)-Math.hypot(b.center[0]-8.8158,b.center[1]-45.5064));if(homes.length<6)throw Error('Servono sei sedi residenziali.');
  for(let id=0;id<6;id++){
   const home=homes[Math.floor(id*(homes.length-1)/5)];
   w.players.push({id,name:names[id],cash:START_CASH,earned:0,spent:0,transfers:0,home:home.id,next:18+id*7});
@@ -21,7 +21,7 @@ export function value(w,company){return Math.round(Object.values(w.assets).filte
 export function controller(c){return Number(Object.keys(c.shares).find(id=>c.shares[id]>.5)??c.manager);}
 export function buildingQuote(w,catalog,id,player=0){
  const p=catalog.find(p=>p.id===id);if(!p)return{reason:'Edificio non disponibile nel gioco.'};
- const asset=w.assets[id];if(!asset)return{kind:'buy',cost:p.price,description:'Acquista una proprietà virtuale. La destinazione reale non cambia.'};
+ const asset=w.assets[id];if(!asset&&p.protected)return{reason:'Luogo pubblico o patrimonio storico: consultabile, non acquistabile nel gioco.'};if(!asset)return{kind:'buy',cost:p.price,description:'Acquista una proprietà virtuale. La destinazione reale non cambia.'};
  const company=w.companies[asset.company];if(company.manager!==player)return{kind:'offer',company:company.id};
  if(asset.level>=8)return{reason:'Massimo sviluppo del prototipo.'};
  return{kind:'upgrade',cost:Math.round(BUSINESSES[asset.business].base*1.6**asset.level),delta:BUSINESSES[asset.business].rate};
