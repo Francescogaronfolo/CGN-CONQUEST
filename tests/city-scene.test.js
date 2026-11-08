@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {metres,projectPoint,insetRing,pickBuilding} from '../src/city-scene.js';
+test('Projection keeps the selected geographical centre in the middle and elevates roofs',()=>{const centre=[8.8158,45.5064];const ground=projectPoint(centre,centre,1,1000,800),roof=projectPoint(centre,centre,1,1000,800,{x:0,y:0},10);assert.equal(ground.x,500);assert.equal(ground.y,424);assert(roof.y<ground.y);assert.equal(roof.x,ground.x);assert(metres([8.82,45.51])[0]>metres([8.81,45.51])[0]);});
+test('Shrinking a footprint leaves clear space without moving its centre',()=>{const ring=[[0,0],[10,0],[10,10],[0,10],[0,0]],small=insetRing(ring,.6);assert.deepEqual(small[0],[2,2]);assert.deepEqual(small[2],[8,8]);assert.deepEqual(small[0],small.at(-1));});
+test('Touch selection recognises roofs, walls and a small finger margin',()=>{const hit={id:'house',roof:[{x:20,y:20},{x:40,y:20},{x:40,y:40},{x:20,y:40},{x:20,y:20}],base:[{x:20,y:40},{x:40,y:40},{x:40,y:60},{x:20,y:60},{x:20,y:40}]};assert.equal(pickBuilding({x:30,y:30},[hit]).id,'house');assert.equal(pickBuilding({x:30,y:50},[hit]).id,'house');assert.equal(pickBuilding({x:15,y:28},[hit]).id,'house');assert.equal(pickBuilding({x:100,y:100},[hit]),undefined);});

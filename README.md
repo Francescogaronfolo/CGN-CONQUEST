@@ -55,3 +55,11 @@ La mappa distingue sagome residenziali note, industria/magazzini, commercio, ser
 Ombre leggere rispettano le sagome esistenti: non rappresentano altezze 3D misurate. Larghezze di strade e acque sono stilizzate per leggibilità. Non sono usate immagini satellitari o dati Google Earth. La vista resta una cartografia vettoriale 2D, utilizzabile senza chiavi API o tiles esterni. I nomi si diradano con lo zoom e con i filtri Territorio / Attività / Patrimonio. Luoghi apre un unico pannello con legenda e accesso ai punti reali.
 
 L’arricchimento è riproducibile con `python tools/enrich-map.py` usando gli estratti OSM in cache. I JSON derivati e le date delle fonti sono inclusi nel repository; gli estratti grezzi, ignorati da Git, non sono richiesti dal gioco. La copertura delle aree dettagliate deriva dagli estratti API del centro e del settore occidentale, non da una nuova zonizzazione inventata o da una certificazione urbanistica.
+
+## Vista di gioco a volumi · aggiornamento 0.3
+
+L’ingresso apre una nuova rappresentazione urbana inclinata: volumi ortografici, pareti, tetti e ombre. Il pulsante “3D · Gioco / 2D · Reale” alterna il tavoliere e la cartografia precedente. Non è fotogrammetria Google Earth: sono volumi stilizzati ricavati dalle sagome OSM; quando manca l’altezza si usa una convenzione visiva esplicita.
+
+La vista di gioco riduce le sagome intorno al loro centro (57% per gli edifici ordinari, 78% per gli elementi distintivi), lasciando più spazio visivo intorno ai lotti. Mostra i lotti principali da 90 m², i luoghi distintivi e tutte le proprietà già possedute. Gli annessi e i piccoli lotti restano nella vista geografica 2D. Le strade e i centri geografici non vengono inventati. Villa, Comune, industria e commercio mantengono nomi e fonti della cartografia.
+
+Trascinamento, rotella/pinch, zoom ±, tasti freccia. Il tocco riconosce tetti, basi, facciate e un piccolo margine per il dito. Le operazioni economiche usano gli stessi identificativi e salvataggi; il popup di acquisto/miglioramento si ancora alla proiezione selezionata. Le schede geografiche rimangono accessibili anche dal pannello Luoghi.
