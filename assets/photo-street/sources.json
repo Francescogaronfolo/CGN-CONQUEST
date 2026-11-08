@@ -1,0 +1,24 @@
+[
+  {
+    "id": "borgo",
+    "file": "borgo.jpg",
+    "author": "tampe / Fabrizio Tampellini",
+    "license": "CC BY-SA 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Castelletto_di_Cuggiono_-_panoramio.jpg",
+    "date": "2007-10-28",
+    "verification": "Wikimedia Commons imageinfo/extmetadata API, 2026-11-09",
+    "changes": "Original photograph retained. Interactive SVG regions, virtual business signs and colour highlights overlaid at runtime; cropping and zoom vary with viewport. Photographic scene adaptations offered under the source CC BY-SA license; application source code is separate."
+  },
+  {
+    "id": "ponte",
+    "file": "ponte.jpg",
+    "author": "Betty Lassini",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Cuggiono_-_Ponte_sul_Naviglio_Grande_-_202109040735.jpeg",
+    "date": "2021-09-04",
+    "verification": "Wikimedia Commons imageinfo/extmetadata API, 2026-11-09",
+    "changes": "Original photograph retained. Interactive SVG regions, virtual business signs and colour highlights overlaid at runtime; cropping and zoom vary with viewport. Photographic scene adaptations offered under the source CC BY-SA license; application source code is separate."
+  }
+]

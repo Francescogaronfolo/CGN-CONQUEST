@@ -1,45 +1,28 @@
-# Strada reale: integrazione parallela
+# Strada foto: prototipo fotografico giocabile
 
-La vista 3D rimane intatta. Il pulsante **Strada reale** apre un laboratorio con
-tre tappe verificate nella ricognizione: Piazza San Giorgio, Villa Annoni e il
-Naviglio a Castelletto. Proprietà, capitale e operazioni usano lo stesso engine e
-lo stesso salvataggio locale. Nessun multiplayer viene introdotto.
+Il pulsante **Strada foto** apre due fotografie reali di Castelletto ospitate nel
+progetto e utilizzabili senza API o chiavi. Il gioco non manda su Google Maps.
+Le sole pagine esterne sono i crediti/fonte/licenza, apribili volontariamente.
 
-## Stato senza chiave
+## Cosa funziona
+- Trascinamento con inerzia assente per mantenere il tocco preciso; zoom ruota/+/-.
+- Facciate SVG cliccabili e insegne virtuali di attività, proprietà e livello.
+- Acquisto/potenziamento usando lo stesso engine, la stessa cassa e il salvataggio.
+- Scheda vicina alla facciata che resta aperta dopo il miglioramento.
+- Cambio punto fra due fotografie; passaggio nello stesso luogo alla vista 3D.
+- Controlli touch e tastiera (frecce/WASD per spostare l'inquadratura).
 
-Il percorso e la gestione delle proprietà vicine funzionano. Il pannello dichiara
-esplicitamente che le fotografie non sono attive. Un link apre il punto in Google
-Maps; quella visita esterna non sincronizza movimento o acquisti. **Non è una
-Street View fotografica incorporata già operativa.**
+## Provenienza e limiti
+Vedere assets/photo-street/sources.json e README.md. Foto 2007 e 2021 da Wikimedia
+Commons, licenze CC BY-SA 3.0/4.0. Non sono 360°, non c'è una sequenza stradale
+continua e le associazioni visive con gli immobili OSM sono indicative. Questo è
+un esperimento di comfort e integrazione, non un rilievo catastale. La crescita
+compare tramite insegne, livello e evidenziazioni: i pixel delle facciate reali
+non vengono ancora ricostruiti in 3D. Le proprietà protette restano escluse.
 
-## Attivazione su Vercel
-
-1. Creare un progetto Google Maps Platform con fatturazione e Maps JavaScript API.
-2. Creare una **browser key**, limitata all'API Maps JavaScript e ai referrer
-   `https://cgn-conquest.vercel.app/*` (aggiungere solo eventuali domini realmente usati).
-3. Impostare la variabile Vercel `GOOGLE_MAPS_BROWSER_KEY` e rifare il deploy.
-4. Configurare quote/avvisi di spesa nel progetto Google Cloud.
-
-La chiave browser viene necessariamente restituita al client da `/api/street-config`:
-non usare credenziali server, service account o token privati. Nessun SDK Google
-viene caricato prima che il giocatore apra questa modalità. Le immagini restano
-nel visualizzatore ufficiale; niente download, caching o ricostruzione da immagini.
-
-## Collaudo necessario dopo attivazione
-
-Verificare copertura di tutte le tappe, navigazione, errori di autenticazione,
-attribuzione Google sempre visibile, selezione marker e acquisto/potenziamento.
-I marker sono basati sui centri OSM, **non ingressi catastali verificati**.
-La colonna proprietà serve anche quando il marker è nascosto o poco preciso.
-Il pulsante Vista 3D passa alla posizione corrente, senza modificare proprietà.
-
-## Limiti e prossimo passo
-
-Il panorama è fotografico: gli upgrade non modificano le fotografie. Il progresso
-è nelle schede e nei marker. Dopo la verifica visiva con servizio attivo, valutare
-etichette di livello e un ingresso comune alle due viste. Non rimuovere la vista
-3D prima del confronto. Chi possiede fotografie panoramiche proprie può in futuro
-aggiungere un provider indipendente: nessuna immagine Google è copiata negli asset.
-
-Fonti: https://developers.google.com/maps/documentation/javascript/streetview
-e https://developers.google.com/maps/documentation/javascript/get-api-key
+## Evoluzione
+Per una vera passeggiata continua servono fotografie panoramiche ravvicinate con
+licenza compatibile oppure scatti propri. Il modello scene/facciate separato
+permette di aggiungerle senza cambiare economia o salvataggio. La precedente
+integrazione Google predisposta non è usata da questa modalità: nessun servizio
+Google viene richiesto e non serve attivare fatturazione per questo prototipo.
