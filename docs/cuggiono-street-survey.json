@@ -1,0 +1,60 @@
+{
+  "surveyDate": "2026-11-08",
+  "method": "Osservazione manuale di Google Maps Street View; nessuna immagine usata come asset del gioco.",
+  "observations": [
+    {
+      "zone": "Piazza San Giorgio / SP31",
+      "url": "https://www.google.com/maps/place/Piazza+S.+Giorgio,+20012+Cuggiono+MI,+Italia/@45.5063821,8.8156302,158a,75y,270h,90t/data=!3m7!1e1!3m5!1s1Lw1-YYSu9-MmMTTCyg5ZQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D1Lw1-YYSu9-MmMTTCyg5ZQ%26yaw%3D270!7i16384!8i8192!4m15!1m8!3m7!1s0x4786f40d358fb755:0xcbdd998a04529686!2sPiazza+S.+Giorgio,+20012+Cuggiono+MI,+Italia!3b1!8m2!3d45.5063889!4d8.8161647!16s%2Fg%2F11b6c65rm7!3m5!1s0x4786f40d358fb755:0xcbdd998a04529686!8m2!3d45.5063889!4d8.8161647!16s%2Fg%2F11b6c65rm7?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+      "imagery": "marzo 2026",
+      "notes": [
+        "Fronti continui prevalentemente bassi, con un edificio più alto visibile su un asse stradale.",
+        "Intonaci crema, giallo chiaro, rosa-corallo; persiane scure, cornici chiare e basamenti più scuri.",
+        "Portoni ad arco, accessi a corti, vetrine al piano strada e serrande; marciapiedi stretti.",
+        "Piazza con cantiere nel panorama: non assumere questa pavimentazione come situazione definitiva."
+      ]
+    },
+    {
+      "zone": "Villa Annoni / Piazza XXV Aprile",
+      "url": "https://www.google.com/maps/place/Parco+di+Villa+Annoni/@45.5046627,8.8163565,158a,75y,160.55h,90t/data=!3m7!1e1!3m5!1snME_MsO1776lIlSE50BMSA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DnME_MsO1776lIlSE50BMSA%26yaw%3D160.5451!7i16384!8i8192!4m10!1m2!2m1!1sVilla+Annoni+Cuggiono!3m6!1s0x4786f40c651b6b6d:0xa58b299015c6a4e3!8m2!3d45.5042711!4d8.8165136!15sChVWaWxsYSBBbm5vbmkgQ3VnZ2lvbm9aFyIVdmlsbGEgYW5ub25pIGN1Z2dpb25vkgEJY2l0eV9wYXJrmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJTYVhVM2NHSjNFQUXgAQD6AQQIDRBM!16s%2Fg%2F11f545gzb6?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+      "imagery": "dicembre 2022 (letto sul panorama)",
+      "notes": [
+        "Corpo centrale più alto e due ali laterali basse che formano una corte a U.",
+        "Intonaco giallo-ocra, cornici chiare, persiane grigie; ritmo regolare delle finestre.",
+        "Accesso centrale con colonne, ingresso assiale, pilastri e cancellata bassa.",
+        "Corte in ciottoli con percorso centrale in lastre chiare, siepi e aiuole ordinate."
+      ]
+    },
+    {
+      "zone": "Ponte e sponde del Naviglio, Castelletto",
+      "url": "https://www.google.com/maps/place/ponte+sul+Naviglio+grande+a+Castelletto+di+Cuggiono/@45.4943107,8.7925983,138a,75y,90t/data=!3m7!1e1!3m5!1sv2u7urcg01rE9mnY0EFESA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dv2u7urcg01rE9mnY0EFESA%26yaw%3D0!7i16384!8i8192!4m14!1m7!3m6!1s0x4786f424017474a1:0xb5fea1b8bac37e50!2sponte+sul+Naviglio+grande+a+Castelletto+di+Cuggiono!8m2!3d45.4943202!4d8.7925727!16s%2Fg%2F11c5xcq8zh!3m5!1s0x4786f424017474a1:0xb5fea1b8bac37e50!8m2!3d45.4943202!4d8.7925727!16s%2Fg%2F11c5xcq8zh?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+      "imagery": "giugno 2026",
+      "notes": [
+        "Ponte rialzato con parapetti bassi in muratura/pietra, ciottoli e fasce longitudinali chiare sul piano di passaggio.",
+        "Naviglio aperto e ben visibile: acqua blu-verde, sponde in muratura e riflessi della vegetazione.",
+        "Alzaia laterale continua, prato basso e vegetazione fitta; case basse affacciate su una sponda.",
+        "Importante la differenza di quota tra percorso, ponte e acqua."
+      ]
+    },
+    {
+      "zone": "Villa/Palazzo Clerici di Castelletto, lato Via Carlo Cornelli",
+      "url": "https://www.google.com/maps/place/Villa+Clerici/@45.4976037,8.7945596,150a,75y,281.13h,90t/data=!3m7!1e1!3m5!1s7jPKl8OIY32EdKmoUpJgSA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D7jPKl8OIY32EdKmoUpJgSA%26yaw%3D281.12518!7i16384!8i8192!4m10!1m2!2m1!1sPalazzo+Clerici+Castelletto+di+Cuggiono!3m6!1s0x4786f424071055df:0xb9d1171d782acf5a!8m2!3d45.4977143!4d8.7937024!15sCidQYWxhenpvIENsZXJpY2kgQ2FzdGVsbGV0dG8gZGkgQ3VnZ2lvbm-SARJ0b3VyaXN0X2F0dHJhY3Rpb27gAQA!16s%2Fg%2F11bx2hkjs9?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+      "imagery": "giugno 2026",
+      "notes": [
+        "Sul lato osservato: muro ocra con coronamento in coppi, pilastri di mattone e grande portone/cancello scuro.",
+        "Nel panorama sono presenti ponteggi, teli blu e cartello di cantiere: non descrivere il complesso come definitivamente abbandonato.",
+        "La scalinata sul Naviglio è confermata dalla fonte comunale e da immagini di repertorio, ma non è visibile interamente da questo panorama.",
+        "Da non confondere con il diverso Palazzo/Casa Clerici in Via San Rocco, nel centro di Cuggiono."
+      ]
+    },
+    {
+      "zone": "San Giorgio, lato Via Benedetto Gualdoni",
+      "url": "https://www.google.com/maps/place/Basilica+Parrocchia+di+San+Giorgio+Martire/@45.5060215,8.8155674,158a,75y,179.82h,90t/data=!3m7!1e1!3m5!1s64WonjpeUarozyRMGlu8eg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D64WonjpeUarozyRMGlu8eg%26yaw%3D179.82408!7i16384!8i8192!4m14!1m7!3m6!1s0x4786f40d49df9e47:0x344534f738fc3847!2sBasilica+Parrocchia+di+San+Giorgio+Martire!8m2!3d45.5059089!4d8.8155203!16s%2Fg%2F1263qm77z!3m5!1s0x4786f40d49df9e47:0x344534f738fc3847!8m2!3d45.5059089!4d8.8155203!16s%2Fg%2F1263qm77z?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+      "imagery": "giugno 2026",
+      "notes": [
+        "Fianco della basilica in mattone a vista, scandito da elementi verticali e basamento chiaro.",
+        "Finestre alte con inferriate e pluviali scuri; strada laterale stretta e fronte urbano vicino.",
+        "La facciata principale e le proporzioni del campanile richiedono un rilievo dedicato prima di una ricostruzione specifica."
+      ]
+    }
+  ]
+}
