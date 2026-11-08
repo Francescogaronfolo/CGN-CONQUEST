@@ -63,3 +63,9 @@ L’ingresso apre una nuova rappresentazione urbana inclinata: volumi ortografic
 La vista di gioco riduce le sagome intorno al loro centro (57% per gli edifici ordinari, 78% per gli elementi distintivi), lasciando più spazio visivo intorno ai lotti. Mostra i lotti principali da 90 m², i luoghi distintivi e tutte le proprietà già possedute. Gli annessi e i piccoli lotti restano nella vista geografica 2D. Le strade e i centri geografici non vengono inventati. Villa, Comune, industria e commercio mantengono nomi e fonti della cartografia.
 
 Trascinamento, rotella/pinch, zoom ±, tasti freccia. Il tocco riconosce tetti, basi, facciate e un piccolo margine per il dito. Le operazioni economiche usano gli stessi identificativi e salvataggi; il popup di acquisto/miglioramento si ancora alla proiezione selezionata. Le schede geografiche rimangono accessibili anche dal pannello Luoghi.
+
+## Identità degli edifici e comfort · aggiornamento 0.4
+
+Archetipi grafici distinti: Villa Annoni con porticato e bandiera comunale, palazzi con cortile e colonne, chiese con campanile, monumenti con piedistallo, negozi con insegna/tenda e vetrine, aziende con coperture tecniche e lucernari, case con falde e aperture. I dettagli sono simbolici e servono a riconoscere la funzione, non ricostruzioni architettoniche certificate. Tutti gli edifici nominati nel dato geografico e quelli associati a luoghi noti restano visibili anche se piccoli.
+
+Il terreno e le strade sono disegnati in una superficie fuori schermo con margine e riutilizzati durante il trascinamento. Il rilascio introduce inerzia breve con decadimento esponenziale; il nuovo tocco la ferma immediatamente. Lo zoom interpola per 160 ms. L’opzione di sistema “riduci movimento” disattiva inerzia e interpolazione. Nessun movimento perpetuo o audio.
