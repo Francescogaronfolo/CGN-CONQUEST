@@ -69,3 +69,15 @@ Trascinamento, rotella/pinch, zoom ±, tasti freccia. Il tocco riconosce tetti, 
 Archetipi grafici distinti: Villa Annoni con porticato e bandiera comunale, palazzi con cortile e colonne, chiese con campanile, monumenti con piedistallo, negozi con insegna/tenda e vetrine, aziende con coperture tecniche e lucernari, case con falde e aperture. I dettagli sono simbolici e servono a riconoscere la funzione, non ricostruzioni architettoniche certificate. Tutti gli edifici nominati nel dato geografico e quelli associati a luoghi noti restano visibili anche se piccoli.
 
 Il terreno e le strade sono disegnati in una superficie fuori schermo con margine e riutilizzati durante il trascinamento. Il rilascio introduce inerzia breve con decadimento esponenziale; il nuovo tocco la ferma immediatamente. Lo zoom interpola per 160 ms. L’opzione di sistema “riduci movimento” disattiva inerzia e interpolazione. Nessun movimento perpetuo o audio.
+
+## Entra in strada · aggiornamento 0.5
+
+Click sull’omino accanto allo zoom, poi click su un punto della strada evidenziata. Nessun trascinamento dell’omino. Il punto viene agganciato al segmento stradale reale; il click lontano dalle strade non avvia la modalità.
+
+La prima vista gaming in prima persona usa Three.js vendorizzato (versione in `vendor/three/version.json`, licenza MIT allegata), geometrie OSM e modelli schematici locali: non è Google Street View e non contiene panorami fotografici. WebGL 2 è necessario; se non disponibile, la modalità mappa resta utilizzabile.
+
+PC: WASD, frecce (su/giù cammino, destra/sinistra rotazione), trascinamento per guardare, E per esaminare il bersaglio, Esc per chiudere la scheda o tornare alla mappa. Su mobile: analogico a sinistra, trascinamento del resto dello schermo per lo sguardo, pulsante Esamina. È anche possibile toccare/cliccare una facciata entro 90 metri.
+
+Le schede usano il catalogo e il portafoglio esistenti: acquisto e miglioramento sono reali operazioni della stessa simulazione locale, con ricontrollo della liquidità. Non si comprano edifici civici, storici o esclusi dal catalogo; per le società altrui la negoziazione resta nel pannello Imprese della mappa. Nessun interno accessibile o multiplayer è simulato.
+
+Movimento normalizzato, collisioni sulle sagome ridotte, stop dell’input al cambio scheda/finestra, aree circostanti ricaricate man mano che ci si sposta. Ombre, materiali, altezze mancanti e dettagli di facciata sono stilizzati; la posizione delle strade deriva dalla cartografia.
