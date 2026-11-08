@@ -7,6 +7,16 @@ const read=name=>JSON.parse(fs.readFileSync(new URL('../data/'+name,import.meta.
 const catalog=read('catalog.json'),places=read('places.json').places,land=read('landscape.geojson');
 const point=p=>({x:p[0],y:p[1]});
 const label=(name,x,y,priority,category='commerce')=>({name,point:[x,y],priority,category,kind:'poi',minZoom:16});
+test('Every rendered polygon and line has valid geographic coordinate depth',()=>{
+ const point=p=>assert(Array.isArray(p)&&p.length===2&&p.every(Number.isFinite));
+ for(const collection of [read('territory.geojson'),land])for(const f of collection.features){
+  const g=f.geometry;
+  if(g.type==='LineString')g.coordinates.forEach(point);
+  else if(g.type==='Polygon')g.coordinates.forEach(r=>r.forEach(point));
+  else if(g.type==='MultiPolygon')g.coordinates.forEach(p=>p.forEach(r=>r.forEach(point)));
+  else assert.fail('Unsupported geographic geometry '+g.type);
+ }
+});
 test('Landmark priority wins collisions; zoom and viewport hide crowded labels',()=>{
  const candidates=[label('Negozio',200,220,20),label('Villa Annoni',200,220,100,'heritage'),label('Fuori schermo',900,220,30)];
  assert.deepEqual(chooseLabels(candidates,point,{width:600,height:700},17).map(p=>p.name),['Villa Annoni']);

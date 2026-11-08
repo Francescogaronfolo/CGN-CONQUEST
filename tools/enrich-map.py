@@ -52,7 +52,7 @@ for fid,e in elements.items():
 for f in geo['features']:
  t=elements.get(f['id'],{}).get('tags',{});f['properties'].update({k:t[k] for k in keep if k in t})
  if f['properties']['kind']=='building':f['properties']['category']=category(t)
- if f['properties']['kind']=='road' and t.get('area')=='yes' and f['geometry']['coordinates'][0]==f['geometry']['coordinates'][-1]:f['geometry']={'type':'Polygon','coordinates':[f['geometry']['coordinates']]}
+ if f['properties']['kind']=='road' and f['geometry']['type']=='LineString' and t.get('area')=='yes' and f['geometry']['coordinates'][0]==f['geometry']['coordinates'][-1]:f['geometry']={'type':'Polygon','coordinates':[f['geometry']['coordinates']]}
 for fid,e in elements.items():
  t=e.get('tags',{});pts=[[p['lon'],p['lat']] for p in e.get('geometry',[]) if 'lon'in p]
  point=[e['lon'],e['lat']] if e['type']=='node' else center(pts[:-1] or pts) if pts else None
