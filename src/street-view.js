@@ -27,13 +27,13 @@ export class StreetView{
    const height=Math.max(4,Math.min(32,parseFloat(f.properties.height)||(['heritage','civic'].includes(f.properties.category)?12:f.properties.category==='industry'?7:7.5))),shape=this.shape([outline]),geometry=new T.ExtrudeGeometry(shape,{depth:height,bevelEnabled:false});geometry.rotateX(-Math.PI/2);
    const category=f.properties.category,color=category==='industry'?'#a4b9bf':category==='commerce'?'#ddbd93':category==='heritage'?'#d9c49d':category==='civic'?'#c9bdcc':'#d2af88';const mesh=new T.Mesh(geometry,[this.material(color),this.material('#e1d5b8')]);mesh.userData.id=f.id;this.assets.add(mesh);this.meshes.push(mesh);this.colliders.push({ring:outline,minX:Math.min(...xs)-.5,maxX:Math.max(...xs)+.5,minZ:Math.min(...zs)-.5,maxZ:Math.max(...zs)+.5});
    const place=this.places.find(p=>p.buildingId===f.id||p.id===f.id),design=buildingDesign(f.properties,place),width=Math.max(...xs)-Math.min(...xs),depth=Math.max(...zs)-Math.min(...zs);
-   this.box(cx,height+.35,cz,width*.98,.7,depth*.98,design==='factory'?'#728c97':design==='church'?'#a77d85':'#bc805e');
+   mesh.material[0]=this.material(design==='factory'?'#728c97':design==='church'?'#a77d85':'#bc805e');
    // Place windows on real facade segments, never on a concave footprint's box.
    const frames=[];let longest=null;
    for(let i=1;i<outline.length;i++){const a=outline[i-1],b=outline[i],length=Math.hypot(b[0]-a[0],b[1]-a[1]);if(!longest||length>longest.length)longest={a,b,length};const cols=Math.min(10,Math.floor(length/2.6)),rows=Math.min(4,Math.floor(height/3));for(let r=0;r<rows;r++)for(let j=0;j<cols&&frames.length<180;j++)frames.push({x:a[0]+(b[0]-a[0])*(j+.5)/cols,z:a[1]+(b[1]-a[1])*(j+.5)/cols,y:1.9+r*2.6,angle:-Math.atan2(b[1]-a[1],b[0]-a[0])});}
    if(frames.length&&Math.hypot(cx-this.loaded.x,cz-this.loaded.z)<150){const windows=new T.InstancedMesh(new T.BoxGeometry(.8,1.05,.1),this.material('#6b999e'),frames.length);frames.forEach((p,i)=>{dummy.rotation.set(0,p.angle,0);dummy.scale.set(1,1,1);dummy.position.set(p.x,p.y,p.z);dummy.updateMatrix();windows.setMatrixAt(i,dummy.matrix);});windows.userData.id=f.id;this.assets.add(windows);this.meshes.push(windows);}
-   if(longest){const {a,b,length}=longest,angle=-Math.atan2(b[1]-a[1],b[0]-a[0]),x=(a[0]+b[0])/2,z=(a[1]+b[1])/2,door=this.box(x,.95,z,1,1.9,.13,'#527e77');door.rotation.y=angle;if(place?.name)this.sign(place.name,x,Math.min(height-1,3.6),z,Math.min(10,Math.max(3,length*.7)),angle);}
-   if(design==='shop')this.box(cx,2.8,cz+depth/2+.5,Math.max(2,width*.8),.35,1.8,'#b66e49');
+   if(longest){const {a,b,length}=longest,angle=-Math.atan2(b[1]-a[1],b[0]-a[0]),x=(a[0]+b[0])/2,z=(a[1]+b[1])/2,door=this.box(x,.95,z,1,1.9,.13,'#527e77');door.rotation.y=angle;if(place?.name)this.sign(place.name,x,Math.min(height-1,3.6),z,Math.min(10,Math.max(3,length*.7)),angle);if(design==='shop'){const awning=this.box(x,2.8,z,Math.max(2,length*.8),.35,1.8,'#b66e49');awning.rotation.y=angle;}}
+
    if(['church','factory'].includes(design))this.box(cx+width*.25,height+3,cz,design==='church'?2:1,6,design==='church'?2:1,design==='church'?'#ccba94':'#809496');
 
   }
