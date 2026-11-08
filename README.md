@@ -81,3 +81,11 @@ PC: WASD, frecce (su/giù cammino, destra/sinistra rotazione), trascinamento per
 Le schede usano il catalogo e il portafoglio esistenti: acquisto e miglioramento sono reali operazioni della stessa simulazione locale, con ricontrollo della liquidità. Non si comprano edifici civici, storici o esclusi dal catalogo; per le società altrui la negoziazione resta nel pannello Imprese della mappa. Nessun interno accessibile o multiplayer è simulato.
 
 Movimento normalizzato, collisioni sulle sagome ridotte, stop dell’input al cambio scheda/finestra, aree circostanti ricaricate man mano che ci si sposta. Ombre, materiali, altezze mancanti e dettagli di facciata sono stilizzati; la posizione delle strade deriva dalla cartografia.
+
+## Ambiente e rete continua · aggiornamento 0.6
+
+Le strade in prima persona sono ora superfici triangolate con raccordi arrotondati e chiusure agli estremi. Marciapiedi e asfalto sono disegnati in strati distinti: i cordoli non attraversano più gli incroci come nei blocchi di prima. Le superfici pedonali poligonali del dato geografico, inclusa Piazza XXV Aprile, sono rappresentate. Le larghezze OSM hanno precedenza; dove assenti si usano misure di gioco, non un rilievo certificato. Normali coerenti evitano differenze di illuminazione tra raccordi e rettilinei.
+
+La modalità pedonale usa sagome al 90–95% per fronti più vicini alla strada; la mappa strategica mantiene il distanziamento precedente. Nuovi tetti a falde seguono le sagome, con chiusura dei frontoni; facciate con intonaci variati, cornici, persiane e portali ad arco. Texture originali procedurali per asfalto e pavimentazione, lampioni distribuiti evitando le costruzioni, alberi nelle aree verdi mappate. Fino a sei passanti decorativi percorrono brevi tratti di marciapiede: non sono giocatori online. Nessun audio.
+
+Sono presenti acqua lineare e collisioni sul Naviglio; i tratti con attributo ponte rimangono attraversabili. La centratura Castelletto ora punta al borgo rilevato. La forma architettonica rialzata e dettagliata del ponte e i modelli specifici dei monumenti restano da rifinire. Ombre morbide abilitate su desktop, ridotte su dispositivi con puntatore touch per contenere il costo grafico; rendering sospeso quando la pagina è nascosta.
