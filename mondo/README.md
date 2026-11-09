@@ -4,8 +4,8 @@ Independent playable prototype at `/mondo/`, alongside the previous game.
 
 - A single original low-poly world with fixed camera orientation, soft following,
   walking character, WASD/arrow keys, touch joystick and click-to-walk pathfinding.
-- Ten fictional businesses and two non-purchasable landmarks inspired by Cuggiono:
-  San Giorgio and Villa Annoni. Street names aid recognition; the layout is an
+- Thirteen virtual businesses and thirteen non-purchasable landmarks inspired by Cuggiono and Castelletto:
+  San Giorgio, Villa Annoni, Palazzo Clerici, Naviglio and bridge, hospital, Carabinieri, oratory, schools and squares. Street names aid recognition; the layout is an
   explicitly simplified composition, not a cadastral or 1:1 reconstruction.
 - Purchases immediately start income. Upgrades add income and change building
   dimensions, storeys, roofs, windows and ownership details. Six levels per site.
@@ -19,3 +19,17 @@ Independent playable prototype at `/mondo/`, alongside the previous game.
 
 `model.js` contains the economy and navigation rules. `scene.js` owns graphics.
 `app.js` connects input, save and contextual actions. Run `npm test` from the root.
+
+## Expanded explorable map
+`places.js` holds the authored road network, water/bridge boundaries, named areas
+and public destination descriptions/sources. `expansion.js` builds the distinctive
+landmark geometry. A lightweight minimap and optional destination list support
+navigation without crowding the normal view. Routes prefer roads and only cross
+the canal on the bridge. All original asset IDs and the existing save key remain
+valid; added businesses become available without resetting the player.
+
+References include the Comune di Cuggiono place/history pages, ASST Ovest Milanese
+hospital page, CSI Milano oratory entry and existing OSM place data. Exact links
+are recorded per public destination in places.js. Palazzo Clerici represents the
+local Castello reference; no invented medieval castle is claimed. Real commercial
+names are geographic references, not affiliations or real property offers.
