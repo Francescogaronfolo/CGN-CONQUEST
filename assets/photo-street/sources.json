@@ -11,14 +11,73 @@
     "changes": "Original photograph retained. Interactive SVG regions, virtual business signs and colour highlights overlaid at runtime; cropping and zoom vary with viewport. Photographic scene adaptations offered under the source CC BY-SA license; application source code is separate."
   },
   {
+    "id": "piazza",
+    "file": "piazza.jpg",
+    "author": "tampe",
+    "license": "CC BY-SA 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Inaugurazione_meridiana_in_Piazza_S.Giorgio_Cuggiono_-_panoramio.jpg",
+    "date": "Taken on 22 June 2008",
+    "width": 1226,
+    "height": 815,
+    "lat": "45.506388",
+    "lng": "8.815627",
+    "changes": "Original photograph retained; runtime crop, zoom and interactive game overlays. Adapted photographic scene retains source license."
+  },
+  {
+    "id": "annoni",
+    "file": "annoni.jpg",
+    "author": "tampe",
+    "license": "CC BY-SA 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Via_Annoni_e_Via_Cicogna_-_Cuggiono_-_panoramio.jpg",
+    "date": "28 December 2009 (original upload date)",
+    "width": 1530,
+    "height": 401,
+    "lat": "45.503860",
+    "lng": "8.815142",
+    "changes": "Original photograph retained; runtime crop, zoom and interactive game overlays. Adapted photographic scene retains source license."
+  },
+  {
     "id": "ponte",
     "file": "ponte.jpg",
     "author": "Betty Lassini",
     "license": "CC BY-SA 4.0",
-    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Cuggiono_-_Ponte_sul_Naviglio_Grande_-_202109040735.jpeg",
     "date": "2021-09-04",
-    "verification": "Wikimedia Commons imageinfo/extmetadata API, 2026-11-09",
-    "changes": "Original photograph retained. Interactive SVG regions, virtual business signs and colour highlights overlaid at runtime; cropping and zoom vary with viewport. Photographic scene adaptations offered under the source CC BY-SA license; application source code is separate."
+    "width": 1280,
+    "height": 960,
+    "lat": null,
+    "lng": null,
+    "changes": "Wikimedia-resized photograph; runtime crop, zoom and interactive game overlays. Adapted photographic scene retains source license."
+  },
+  {
+    "id": "fratelli",
+    "file": "fratelli.jpg",
+    "author": "tampe",
+    "license": "CC BY-SA 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Via_Fratelli_Piazza_-_Cuggiono_-_panoramio.jpg",
+    "date": "28 December 2009 (original upload date)",
+    "width": 1280,
+    "height": 865,
+    "lat": "45.506781",
+    "lng": "8.813001",
+    "changes": "Wikimedia-resized photograph; runtime crop, zoom and interactive game overlays. Adapted photographic scene retains source license."
+  },
+  {
+    "id": "matteotti",
+    "file": "matteotti.jpg",
+    "author": "tampe",
+    "license": "CC BY-SA 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Via_Matteotti_-_Cuggiono_-_panoramio.jpg",
+    "date": "28 December 2009 (original upload date)",
+    "width": 1280,
+    "height": 865,
+    "lat": "45.509412",
+    "lng": "8.809253",
+    "changes": "Wikimedia-resized photograph; runtime crop, zoom and interactive game overlays. Adapted photographic scene retains source license."
   }
 ]

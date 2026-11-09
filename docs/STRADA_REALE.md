@@ -1,6 +1,6 @@
 # Strada foto: prototipo fotografico giocabile
 
-Il pulsante **Strada foto** apre due fotografie reali di Castelletto ospitate nel
+Il pulsante **Foto reali** apre sei fotografie reali di Cuggiono e Castelletto ospitate nel
 progetto e utilizzabili senza API o chiavi. Il gioco non manda su Google Maps.
 Le sole pagine esterne sono i crediti/fonte/licenza, apribili volontariamente.
 
@@ -9,7 +9,7 @@ Le sole pagine esterne sono i crediti/fonte/licenza, apribili volontariamente.
 - Facciate SVG cliccabili e insegne virtuali di attività, proprietà e livello.
 - Acquisto/potenziamento usando lo stesso engine, la stessa cassa e il salvataggio.
 - Scheda vicina alla facciata che resta aperta dopo il miglioramento.
-- Cambio punto fra due fotografie; passaggio nello stesso luogo alla vista 3D.
+- Cambio punto fra sei fotografie; passaggio nello stesso luogo alla vista 3D.
 - Controlli touch e tastiera (frecce/WASD per spostare l'inquadratura).
 
 ## Provenienza e limiti
@@ -26,3 +26,6 @@ licenza compatibile oppure scatti propri. Il modello scene/facciate separato
 permette di aggiungerle senza cambiare economia o salvataggio. La precedente
 integrazione Google predisposta non è usata da questa modalità: nessun servizio
 Google viene richiesto e non serve attivare fatturazione per questo prototipo.
+
+Accesso diretto: `/?view=foto`, oppure `/?view=foto&scene=fratelli`.
+Anteprime fotografiche scorrevoli; primo panorama alleggerito a circa 300 KB.
