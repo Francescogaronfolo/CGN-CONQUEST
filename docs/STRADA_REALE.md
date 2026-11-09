@@ -29,3 +29,15 @@ Google viene richiesto e non serve attivare fatturazione per questo prototipo.
 
 Accesso diretto: `/?view=foto`, oppure `/?view=foto&scene=fratelli`.
 Anteprime fotografiche scorrevoli; primo panorama alleggerito a circa 300 KB.
+
+## Esperienza strada unificata
+Un solo comando **Esplora strada**, una barra Foto/3D e una sola scheda di gestione.
+Il cambio 3D → Foto è abilitato entro 120 metri da una scena disponibile; fuori
+copertura non viene effettuato un teletrasporto. Il ritorno alla stessa scena 3D
+ripristina coordinate, orientamento e inclinazione esatti, mantenendo l'edificio
+selezionato. Scegliere un altro luogo dal menu invalida il punto precedente.
+I punti di ingresso sono agganciati alla strada OSM vicina per evitare lo spawn
+in un edificio o nel canale. Alcune facciate usano ritagli poligonali delle stesse
+foto, con crediti condivisi. Sono texture illustrative: nessuna ricostruzione
+fotogrammetrica né corrispondenza metrica verificata. Tutti gli scatti restano
+consultabili nel menu Luoghi; panorama continuo 360° ancora non disponibile.
