@@ -10,6 +10,7 @@ export class StreetExperience{
   this.root.querySelector('[data-map]').onclick=()=>this.exit();this.root.querySelector('[data-places]').onclick=()=>{const nav=this.root.querySelector('.unified-places');nav.hidden=!nav.hidden;};
   for(const b of this.root.querySelectorAll('[data-mode]'))b.onclick=()=>this.switchMode(b.dataset.mode);
   for(const b of this.root.querySelectorAll('[data-place]'))b.onclick=()=>this.goPlace(b.dataset.place);
+  document.addEventListener('pointerdown',e=>{if(this.active&&!this.card.hidden&&!e.target.closest('.unified-card,.unified-top,.unified-places,.unified-credits,[data-site]'))this.closeCard();},true);
   document.addEventListener('keydown',e=>{if(!this.active||e.key!=='Escape')return;e.stopImmediatePropagation();e.preventDefault();if(!this.card.hidden)this.closeCard();else this.exit();},true);
  }
  async walker(){if(!this.walk)this.walk=await this.createWalker({onExit:()=>this.exit(),onInspect:id=>this.inspect(id)});return this.walk;}
